@@ -1,0 +1,2 @@
+C:\Users\palol\source\repos\PaulTicTacToe\Debug\PaulTicTacToe.exe
+C:\Users\palol\source\repos\PaulTicTacToe\Debug\PaulTicTacToe.pdb
