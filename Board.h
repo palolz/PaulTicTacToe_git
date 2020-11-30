@@ -18,10 +18,10 @@ public:
         return m_matrix[index];
     }
     bool drawBoard();
-    bool insertMark(char mark, int index);
-    bool checkRowWin(char mark);
-    bool checkColumnWin(char mark);
-    bool checkDiagonalWin(char mark);
+    bool insertMark(const char* mark, int index);
+    bool checkRowWin(const char* mark);
+    bool checkColumnWin(const char* mark);
+    bool checkDiagonalWin(const char* mark);
     bool isBoardFull();
     
 };

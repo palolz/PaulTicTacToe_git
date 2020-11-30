@@ -38,11 +38,11 @@ bool Board::drawBoard()
 * input: X or O and index of board matrix
 * Output: bool- 1:sucess 2:faliur
 ***********************************************************************************/
-bool Board::insertMark(char mark, int index)
+bool Board::insertMark(const char* mark, int index)
 {   
     if ((m_matrix[(index - 1)] != 'X') && (m_matrix[(index - 1)] != 'O'))
     {
-        m_matrix[index - 1] = mark;
+        m_matrix[index - 1] = *mark;
         return 1;
     }
     else { return 0; }
@@ -63,13 +63,13 @@ ___|___|___
 * Input: mark X or O
 * Output: bool- 1:sucess 0:fail
 ***********************************************************************************/
-bool Board::checkRowWin(char mark)
+bool Board::checkRowWin(const char* mark)
 {
-    if ((m_matrix[0] == mark) && (m_matrix[1] == mark) && (m_matrix[2] == mark))
+    if ((m_matrix[0] == *mark) && (m_matrix[1] == *mark) && (m_matrix[2] == *mark))
         return 1;
-    else if ((m_matrix[3] == mark) && (m_matrix[4] == mark) && (m_matrix[5] == mark))
+    else if ((m_matrix[3] == *mark) && (m_matrix[4] == *mark) && (m_matrix[5] == *mark))
         return 1;
-    else if ((m_matrix[6] == mark) && (m_matrix[7] == mark) && (m_matrix[8] == mark))
+    else if ((m_matrix[6] == *mark) && (m_matrix[7] == *mark) && (m_matrix[8] == *mark))
         return 1;
     else
         return 0;
@@ -89,13 +89,13 @@ ___|___|___
 * Input: mark X or O
 * Output: bool- 1:sucess 0:fail
 ***********************************************************************************/
-bool Board::checkColumnWin(char mark)
+bool Board::checkColumnWin(const char* mark)
 {
-    if ((m_matrix[0] == mark) && (m_matrix[3] == mark) && (m_matrix[6] == mark))
+    if ((m_matrix[0] == *mark) && (m_matrix[3] == *mark) && (m_matrix[6] == *mark))
         return 1;
-    else if ((m_matrix[1] == mark) && (m_matrix[4] == mark) && (m_matrix[7] == mark))
+    else if ((m_matrix[1] == *mark) && (m_matrix[4] == *mark) && (m_matrix[7] == *mark))
         return 1;
-    else if ((m_matrix[2] == mark) && (m_matrix[5] == mark) && (m_matrix[8] == mark))
+    else if ((m_matrix[2] == *mark) && (m_matrix[5] == *mark) && (m_matrix[8] == *mark))
         return 1;
     else
         return 0;
@@ -115,11 +115,11 @@ ___|___|___
 * Input: mark X or O
 * Output: bool- 1:sucess 0:fail
 ***********************************************************************************/
-bool Board::checkDiagonalWin( char mark)
+bool Board::checkDiagonalWin(const char* mark)
 {
-    if ((m_matrix[0] == mark) && (m_matrix[4] == mark) && (m_matrix[8] == mark))
+    if ((m_matrix[0] == *mark) && (m_matrix[4] == *mark) && (m_matrix[8] == *mark))
         return 1;
-    else if ((m_matrix[6] == mark) && (m_matrix[4] == mark) && (m_matrix[2] == mark))
+    else if ((m_matrix[6] == *mark) && (m_matrix[4] == *mark) && (m_matrix[2] == *mark))
         return 1;
     else
         return 0;

@@ -21,9 +21,9 @@ public:
 	Game()
 	{
 		m_currentPlayer = 1;
-		m_p1.SetPlayerMark('X');
+		m_p1.SetPlayerMark("X");
 		p("Player 1 is (X)");
-		m_p2.SetPlayerMark('O');
+		m_p2.SetPlayerMark("O");
 		p("Player 2 is (o)");
 		m_board.drawBoard();
 	}

@@ -20,7 +20,7 @@ ___|___|___
 ***********************************************************************************/
 void Game::PlayGame()
 {
-	char mark;//local copy mark....
+	const char* mark;//local copy mark....
 	
 	if (m_currentPlayer == 1)
 		mark = m_p1.GetPlayerMark();
@@ -28,7 +28,7 @@ void Game::PlayGame()
 		mark = m_p2.GetPlayerMark();
 
 	std::cout << "Ready Player " << m_currentPlayer << "!!" << std::endl;
-	std::cout << "Player " << m_currentPlayer <<" is (" << mark <<")"<< std::endl;
+	std::cout << "Player " << m_currentPlayer <<" is (" << *mark <<")"<< std::endl;
 	
 	std::cout << "Based on the TictacToe Board Above," << std::endl;
 	std::cout<<"Please enter the available index, where you" << std::endl;

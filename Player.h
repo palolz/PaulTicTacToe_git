@@ -9,13 +9,14 @@
 class Player
 {
 private:
-	char m_mark;
+	const char* m_mark;
 public:
-	void SetPlayerMark(char mark)
+
+	void SetPlayerMark(const char* mark)
 	{
 		m_mark = mark;
 	}
-	char GetPlayerMark()
+	const char* GetPlayerMark()
 	{
 		return m_mark;
 	}
